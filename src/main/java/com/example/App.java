@@ -23,16 +23,15 @@ public class App {
         
 
 
-        HashMap<String,ServerThread> partecipanti = new HashMap();
+        ArrayList<ServerThread> partecipanti = new ArrayList<ServerThread>();
         BufferedReader in = new BufferedReader(new InputStreamReader(server.accept().getInputStream()));
 
         while(true){
 
-
-            String nome = in.readLine();
+            
 
             ServerThread p = new ServerThread(server.accept(),partecipanti);
-            partecipanti.put(nome, p);
+            partecipanti.add(p);
             p.start();
 
         }
