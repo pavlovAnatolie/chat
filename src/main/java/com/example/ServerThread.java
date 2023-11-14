@@ -37,7 +37,7 @@ public class ServerThread extends Thread{
     
     public void run(){
         try{
-            System.out.println("----------connected to the chat----------");
+            System.out.println("\u001B[32m" +"----------connected to the chat----------"+ "\u001B[37m");
             broadcast("----------"+getNome()+"connected to the chat----------");
             in.readLine();
             while(true){
@@ -53,12 +53,12 @@ public class ServerThread extends Thread{
     private void broadcast(String message) throws IOException{
         for(String name: partecipanti.keySet()){
             if(currentThread() != partecipanti.get(name))
-                unicast(message, name);
+            partecipanti.get(name).send(message);
         }
     }
     
     private void unicast(String message, String name) throws IOException{
-        partecipanti.get(name).send(message);
+        partecipanti.get(name).send("\u001B[31m" + message+ "\u001B[37m");
     }
 
 
