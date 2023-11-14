@@ -20,7 +20,7 @@ public class App {
             // metto il server in ascolto sulla porta 3000 per poter acquisire e creare la socket
         ServerSocket server = new ServerSocket(3000);
         System.out.println("il server è in ascolto");
-        System.out.println("inserisci lo username da usare");
+        
 
 
         HashMap<String,ServerThread> partecipanti = new HashMap();
