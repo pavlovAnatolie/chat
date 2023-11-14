@@ -23,10 +23,22 @@ public class ServerThread extends Thread{
             System.out.println(e.getMessage());
         }
     }
+
+    private String getNome(){
+        String nome  ="";
+        for (String nomi : partecipanti.keySet()) {
+            if(currentThread().equals(partecipanti.get(nomi))){
+                nome = nomi;
+            }
+        }
+        
+        return nome;
+    }
     
     public void run(){
         try{
             System.out.println("----------connected to the chat----------");
+            broadcast("----------"+getNome()+"connected to the chat----------");
             in.readLine();
             while(true){
                 
