@@ -29,6 +29,7 @@ public class ServerThread extends Thread{
     private String getNome(){
         return nome;
    }
+
     
     private boolean issetName(String s){
         boolean presente = false;
@@ -36,6 +37,7 @@ public class ServerThread extends Thread{
             if(thread.getNome().equals(s)){ 
                 
                 presente = true;
+                break;
             }
         }
         return presente;
@@ -43,7 +45,6 @@ public class ServerThread extends Thread{
     
     public void run(){
         try{
-            System.out.println("provas");
             String nome = in.readLine();
             this.nome = nome;
             System.out.println(nome+" è entrato nel server" );
@@ -63,6 +64,8 @@ public class ServerThread extends Thread{
                     broadcast("\u001B[32m" + getNome() + "disconected \u001B[37m");
                     partecipanti.remove(getNome());
                     socket.close();
+                }else{
+                    
                 }
 
                  
