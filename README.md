@@ -8,7 +8,7 @@ Java - programming language (Object-Oriented).
 
 ---
 
-**This is a code for a server which offer a possibility to clients to send messages to each other by using technology of broadcast and unicast**
+**This is a code for a multithread server which offer a possibility to clients to send messages to each other by using technology of broadcast and unicast**
 
 
 ---
@@ -16,7 +16,5 @@ Java - programming language (Object-Oriented).
 **group's members:**
 
 - Pavlov Anatolie
-
 - Taiti Samuele
-
 - Soliman Ammaar
