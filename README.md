@@ -15,6 +15,6 @@ Java - programming language (Object-Oriented).
 
 **group's members:**
 
-Pavlov Anatolie
-Taiti Samuele
-Soliman Ammaar
+-Pavlov Anatolie
+-Taiti Samuele
+-Soliman Ammaar
