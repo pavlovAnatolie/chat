@@ -3,25 +3,20 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 
-/**
- * Hello world!
- *
- */
-
 public class App {
 
     public static void main(String[] args){
 
     
         try{
-            // metto il server in ascolto sulla porta 3000 per poter acquisire e creare la socket
+            //creating a serversocket
             ServerSocket server = new ServerSocket(3000);
             System.out.println("il server è in ascolto");
             
 
-
+            //creating a list of users
             ArrayList<ServerThread> partecipanti = new ArrayList<ServerThread>();
-
+            //a cycle to accept aevery user that try to connect to the chat
             while(true){
 
                 Socket client = server.accept();
