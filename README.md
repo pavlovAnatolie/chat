@@ -14,14 +14,14 @@ Java - programming language (Object-Oriented).
 **Protocol**
 
 
--the first messagge from a client is hi name.
+- the first messagge from a client is hi name.
 
--every messagge is sent in brodcast
+- every messagge is sent in brodcast
 
--to send a unicast messagge mode it have to be preceded by a string with this format "@username"
+- to send a unicast messagge mode it have to be preceded by a string with this format "@username"
   if the specified receiver doesnt exist the sender will riceive an error string
   
--to quite the chat clients must to use a command "/close"
+- to quite the chat clients must to use a command "/close"
 
 ---
 
