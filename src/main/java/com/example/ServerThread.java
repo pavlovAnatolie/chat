@@ -76,8 +76,8 @@ public class ServerThread extends Thread {
                     //usign the unicast method
                     unicast(messaggio, nomet);
                 
-                }else if(messaggio.startsWith("@") && !issetName(messaggio) || patecipanti.size() == 1){
-                     out.writeBytes("\u001B[31m" "+"ERRORE"+" \u001B[37m");
+                }else if(messaggio.startsWith("@") && !issetName(messaggio)){
+                     out.writeBytes("\u001B[31m ERRORE UTENTE NON INSERITO\u001B[37m \n");
                 //checking for closing
                 } else if (messaggio.equals("/close")) {
                     System.out.println("chiuso");
@@ -87,7 +87,7 @@ public class ServerThread extends Thread {
                     partecipanti.remove(currentThread());
                     socket.close();
                     //if the message is not special it's send to everyone
-                } else {
+                }else {
                     broadcast(messaggio);
                 }
 
@@ -129,7 +129,7 @@ public class ServerThread extends Thread {
     //method that sends a string(message)
     private void send(String message, String name) throws IOException {
         DataOutputStream out = new DataOutputStream(socket.getOutputStream());// output
-        out.writeBytes(name + "==>\t" + message + "\n");
+        out.writeBytes("\n"+name + "==>\t" + message + "\n");
     }
 
 }
